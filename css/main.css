@@ -1,10 +1,10 @@
 /** Authenticate Pages **/
-.authenticate>main {
+body.authenticate>main {
   width: 100vw;
   height: 100vh;
 }
 
-.authenticate>main>form {
+body.authenticate>main>form {
   border-radius: 10px;
   border: thin solid #ddd;
   width: 50vw;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 540px) {
-  .authenticate>main>form {
+  body.authenticate>main>form {
     border-radius: 0;
     border: none;
     width: auto;
