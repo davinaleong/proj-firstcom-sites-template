@@ -1,4 +1,8 @@
 /** Authenticate Pages **/
+body.authenticate {
+  display: block;
+}
+
 body.authenticate>main {
   width: 100vw;
   height: 100vh;
@@ -19,3 +23,24 @@ body.authenticate>main>form {
   }
 }
 /** Authenticate Pages - End **/
+
+/** Dashboard Page **/
+body {
+  display: grid;
+  grid-template-areas:
+    'nav nav nav nav nav'
+    'aside main main main main';
+}
+
+body>nav {
+  grid-area: nav;
+}
+
+body>aside {
+  grid-area: aside;
+}
+
+body>main {
+  grid-area: main;
+}
+/** Dashboard Page - End **/
