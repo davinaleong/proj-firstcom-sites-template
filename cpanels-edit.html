@@ -56,16 +56,16 @@
 
   <main>
     <div class="container-fluid">
-      <h1>Edit Source</h1>
+      <h1>Edit CPanel</h1>
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="settings.html">Settings</a></li>
-          <li class="breadcrumb-item"><a href="settings-sources.html">Sources</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Edit Source</li>
+          <li class="breadcrumb-item"><a href="cpanels.html">CPanels</a></li>
+          <li class="breadcrumb-item"><a href="cpanels-view.html">ID: 1</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Edit CPanel</li>
         </ol>
       </nav>
-
+      
       <form method="post">
         <div class="mb-3">
           <label for="id" class="form-label">ID</label>
@@ -74,7 +74,37 @@
 
         <div class="mb-3">
           <label for="name" class="form-label">Name*</label>
-          <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="Images" required>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="Site Name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="site_url" class="form-label">Site URL</label>
+          <input type="text" class="form-control" name="site_url" id="site_url" value="www.site.com.sg/site" placeholder="Site URL">
+        </div>
+
+        <div class="mb-3">
+          <label for="admin_url" class="form-label">Admin URL</label>
+          <input type="text" class="form-control" name="admin_url" id="admin_url" value="www.site.com.sg/site/admin" placeholder="Admin URL">
+        </div>
+
+        <div class="mb-3">
+          <label for="cpanel_username" class="form-label">CPanel Username</label>
+          <input type="text" class="form-control" name="cpanel_username" id="cpnel_username" value="siteo" placeholder="CPanel Username">
+        </div>
+
+        <div class="mb-3">
+          <label for="cpanel_password" class="form-label">CPanel Password</label>
+          <input type="text" class="form-control" name="cpanel_password" id="cpanel_password" value="CtZ[^D.q+6maVyfF" placeholder="CPanel Password">
+        </div>
+
+        <div class="mb-3">
+          <label for="backend_username" class="form-label">Backend Username</label>
+          <input type="text" class="form-control" name="backend_username" id="backend_username" value="siteo" placeholder="Backend Username">
+        </div>
+
+        <div class="mb-3">
+          <label for="backend_password" class="form-label">Backend Password</label>
+          <input type="text" class="form-control" name="backend_password" id="backend_password" value="CtZ[^D.q+6maVyfF" placeholder="Backend Password">
         </div>
 
         <div class="mb-3">
@@ -90,33 +120,12 @@
         <p>* required fields</p>
         
         <div>
-          <a href="settings-sources.html" class="btn btn-primary mr-1">Submit <i class="fas fa-check fa-fw"></i></a>
-          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-            Delete <i class="fas fa-trash-alt fa-fw"></i>
-          </button>
+          <a href="cpanels-view.html" class="btn btn-primary mr-1">Submit <i class="fas fa-check fa-fw"></i></a>
+          <a href="cpanels-view.html" class="btn btn-outline-secondary mr-1">Cancel <i class="fas fa-ban fa-fw"></i></a>
         </div>
       </form>
     </div>
   </main>
-
-  <!-- Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteModalLabel">Delete Source</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>This action cannot be undone!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel <i class="fas fa-ban fa-fw"></i></button>
-          <button type="button" class="btn btn-danger">Delete <i class="fas fa-trash-alt fa-fw"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>

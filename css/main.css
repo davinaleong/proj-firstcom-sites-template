@@ -47,10 +47,12 @@ body>nav form button {
 body>aside {
   grid-area: aside;
   min-height: calc(100vw - 56px);
+  padding-bottom: 1em;
 }
 
 body>main {
   grid-area: main;
   min-height: calc(100vw - 56px);
+  padding-bottom: 1em;
 }
 /** Dashboard Page - End **/
