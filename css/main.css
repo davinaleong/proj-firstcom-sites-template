@@ -55,4 +55,11 @@ body>main {
   min-height: calc(100vw - 56px);
   padding-bottom: 1em;
 }
+
+#btn-top {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 1;
+}
 /** Dashboard Page - End **/
