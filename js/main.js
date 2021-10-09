@@ -5,3 +5,7 @@ function goToPage(url) {
 function goToEditSourcePage() {
   goToPage('settings-sources-edit.html');
 }
+
+function goToEditCpanelPage() {
+  goToPage('cpanels-edit.html');
+}
