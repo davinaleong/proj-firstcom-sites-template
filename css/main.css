@@ -36,6 +36,10 @@ body>nav {
   grid-area: nav;
 }
 
+body>nav form button {
+  width: 20%;
+}
+
 body>aside {
   grid-area: aside;
   min-height: calc(100vw - 56px);
