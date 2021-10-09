@@ -1,3 +1,7 @@
+.clickable:hover {
+  cursor: pointer;
+}
+
 /** Authenticate Pages **/
 body.authenticate {
   display: block;
