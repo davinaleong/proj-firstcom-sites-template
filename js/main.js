@@ -6,6 +6,6 @@ function goToEditSourcePage() {
   goToPage('settings-sources-edit.html');
 }
 
-function goToEditCpanelPage() {
-  goToPage('cpanels-edit.html');
+function goToViewCpanelPage() {
+  goToPage('cpanels-view.html');
 }
