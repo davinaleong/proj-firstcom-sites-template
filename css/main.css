@@ -38,9 +38,11 @@ body>nav {
 
 body>aside {
   grid-area: aside;
+  min-height: calc(100vw - 56px);
 }
 
 body>main {
   grid-area: main;
+  min-height: calc(100vw - 56px);
 }
 /** Dashboard Page - End **/
