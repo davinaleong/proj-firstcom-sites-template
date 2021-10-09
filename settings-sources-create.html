@@ -56,59 +56,25 @@
 
   <main>
     <div class="container-fluid">
-      <h1>
-        Sources <a href="settings-sources-create.html">New <i class="fas fa-plus fa-fw"></i></a>
-      </h1>
+      <h1>Create Source</h1>
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="settings.html">Settings</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Sources</li>
+          <li class="breadcrumb-item"><a href="settings-sources.html">Sources</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Create Source</li>
         </ol>
       </nav>
 
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Created At</th>
-            <th scope="col">Updated At</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="clickable">
-            <th scope="row">1</th>
-            <th scope="row">Images</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-          </tr>
-          <tr class="clickable">
-            <th scope="row">2</th>
-            <th scope="row">Projects</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-          </tr>
-          <tr class="clickable">
-            <th scope="row">3</th>
-            <th scope="row">Users</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-          </tr>
-          <tr class="clickable">
-            <th scope="row">4</th>
-            <th scope="row">Demo</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-          </tr>
-          <tr class="clickable">
-            <th scope="row">5</th>
-            <th scope="row">Live</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-            <th scope="row">26-09-2021 16:36:00</th>
-          </tr>
-        </tbody>
-      </table>
+      <form method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name*</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" required>
+        </div>
+
+        <p>* required fields</p>
+        <a href="settings-sources.html" class="btn btn-primary">Submit <i class="fas fa-check fa-fw"></i></a>
+      </form>
     </div>
   </main>
 
