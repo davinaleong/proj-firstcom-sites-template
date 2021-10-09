@@ -9,3 +9,7 @@ function goToEditSourcePage() {
 function goToViewCpanelPage() {
   goToPage('cpanels-view.html');
 }
+
+function goToViewProjectPage() {
+  goToPage('projects-view.html');
+}
