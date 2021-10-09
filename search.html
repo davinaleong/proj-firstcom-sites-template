@@ -19,7 +19,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <form class="d-flex w-100">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" value="Site" aria-label="Search">
+          <!--<button class="btn btn-outline-primary" type="submit">Search <i class="fas fa-search fa-fw"></i></button>-->
           <a href="search.html" class="btn btn-outline-primary">Search <i class="fas fa-search fa-fw"></i></a>
         </form>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -56,16 +57,59 @@
 
   <main>
     <div class="container-fluid">
-      <h1>
-        CPanels <a href="cpanels-create.html" class="btn btn-outline-primary">Create <i class="fas fa-plus fa-fw"></i></a>
-      </h1>
+      <h1>Search</h1>
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">CPanels</li>
+          <li class="breadcrumb-item active" aria-current="page">Search</li>
         </ol>
       </nav>
 
+      <h2>Projects</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="clickable" onclick="goToViewProjectPage()">
+            <td scope="row">1</td>
+            <td scope="row">Site Name</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+          </tr>
+          <tr class="clickable" onclick="goToViewProjectPage()">
+            <td scope="row">2</td>
+            <td scope="row">Site Name</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+          </tr>
+          <tr class="clickable" onclick="goToViewProjectPage()">
+            <td scope="row">3</td>
+            <td scope="row">Site Name</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+          </tr>
+          <tr class="clickable" onclick="goToViewProjectPage()">
+            <td scope="row">4</td>
+            <td scope="row">Site Name</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+          </tr>
+          <tr class="clickable" onclick="goToViewProjectPage()">
+            <td scope="row">5</td>
+            <td scope="row">Site Name</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+            <td scope="row">26-09-2021 16:36:00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>CPanels</h2>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -106,50 +150,8 @@
             <td scope="row">26-09-2021 16:36:00</td>
             <td scope="row">26-09-2021 16:36:00</td>
           </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">6</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">7</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">8</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">9</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">10</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
         </tbody>
       </table>
-
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">|&lt;</a></li>
-          <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
-          <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
-          <li class="page-item"><a class="page-link" href="#">&gt;|</a></li>
-        </ul>
-      </nav>
     </div>
 
     <a id="btn-top" href="#top" class="btn btn-secondary">Top <i class="fas fa-chevron-up"></i></a>

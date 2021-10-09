@@ -40,7 +40,8 @@ body>nav {
   grid-area: nav;
 }
 
-body>nav form button {
+body>nav form button,
+body>nav form a {
   width: 20%;
 }
 
