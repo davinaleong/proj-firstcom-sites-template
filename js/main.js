@@ -33,3 +33,20 @@ function appendProjects(count, selector, viewPage) {
     $(selector).append(projectCardHtml);
   }
 }
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at.\n\rLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at.\n\rLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at.';
+
+function appendNotes(selector) {
+  let liHtml = '';
+  const parts = text.split('\n\r');
+  
+  parts.forEach(part => {
+    liHtml += `<li>${part}</li>`;
+  });
+
+  $(selector).html(`<ul>${liHtml}</ul>`);
+}
+
+function appendTextarea(selector) {
+  $(selector).val(text);
+}

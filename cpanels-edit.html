@@ -108,6 +108,11 @@
         </div>
 
         <div class="mb-3">
+          <label for="notes" class="form-label">Notes</label>
+          <textarea class="form-control" name="notes" id="notes" rows="4"></textarea>
+        </div>
+
+        <div class="mb-3">
           <label for="created_at" class="form-label">Created At</label>
           <input type="text" readonly class="form-control-plaintext" id="created_at" value="26-09-2021 16:36:00">
         </div>
@@ -132,5 +137,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      appendTextarea('#notes');
+    });
+  </script>
 </body>
 </html>
