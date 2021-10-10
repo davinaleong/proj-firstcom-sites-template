@@ -56,7 +56,12 @@
 
   <main>
     <div class="container-fluid">
-      <h1>Edit Project Type</h1>
+      <h1>
+        Edit Project Type
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+          Delete <i class="fas fa-trash-alt fa-fw"></i>
+        </button>
+      </h1>
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -92,9 +97,6 @@
         <div>
           <a href="settings-project-types.html" class="btn btn-primary mr-1">Submit <i class="fas fa-check fa-fw"></i></a>
           <a href="settings-project-types.html" class="btn btn-outline-secondary mr-1">Cancel <i class="fas fa-ban fa-fw"></i></a>
-          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-            Delete <i class="fas fa-trash-alt fa-fw"></i>
-          </button>
         </div>
       </form>
     </div>
