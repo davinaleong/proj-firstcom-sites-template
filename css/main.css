@@ -63,6 +63,19 @@ body>main {
   grid-gap: 1em;
 }
 
+.setting-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.setting-links>* {
+  display: block;
+}
+
+.setting-links>*:not(:last-child) {
+  margin-right: 1em;
+}
+
 #btn-top {
   position: fixed;
   bottom: 1em;
