@@ -66,7 +66,7 @@
         </ol>
       </nav>
 
-      <div id="projects"></div>
+      <div id="projects" class="mb-3"></div>
 
       <nav aria-label="Page navigation example">
         <ul class="pagination">
@@ -88,7 +88,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <script>
-    appendProjects(48, 'projects');
+    $(document).ready(function() {
+      appendProjects(48, '#projects');
+    });
   </script>
 </body>
 </html>
