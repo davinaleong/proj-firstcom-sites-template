@@ -45,6 +45,7 @@ function appendProjects(count, selector, viewPage, cardType = 'cpanel') {
     <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
     <div class="card-body">
       <h5 class="card-title">Site Name</h5>
+      <p><span class="badge bg-info">Open Cart</span></p>
       <a href="${viewPage}" class="btn btn-primary">View CPanel <i class="fas fa-eye fa-fw"></i></a>
     </div>
   </div>`;
@@ -54,7 +55,7 @@ function appendProjects(count, selector, viewPage, cardType = 'cpanel') {
       <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
       <div class="card-body">
         <h5 class="card-title">Site Name</h5>
-        <p><span class="badge bg-info">Site is live</span></p>
+        <p><span class="badge bg-info">Open Cart</span> <span class="badge bg-primary">Live</span></p>
         <a href="${viewPage}" class="btn btn-primary">View Project <i class="fas fa-eye fa-fw"></i></a>
       </div>
     </div>`;
