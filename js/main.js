@@ -82,10 +82,11 @@ function appendTextarea(selector) {
   $(selector).val(text);
 }
 
-function appendProjectTypeOptions(selector) {
+function appendProjectTypeOptions(selector, editMode = false) {
   let optionHtml = '<option value="">-- Select Project Type --</option>';
-  projectTypes.forEach(projectType => {
-    optionHtml += `<option value="${projectType.value}">${projectType.label}</option>`;
+  projectTypes.forEach((projectType, index) => {
+    const selected = editMode ? 'selected="selected"' : '';
+    optionHtml += `<option value="${projectType.value}" ${selected}>${projectType.label}</option>`;
   });
   $(selector).html(optionHtml);
 }
