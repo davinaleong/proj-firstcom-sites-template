@@ -9,6 +9,16 @@ const cardTypes = {
   project: 'project'
 };
 
+const projectTypes = [
+  {
+    label: 'Open Cart',
+    value: 1
+  }, {
+    label: 'WordPress / WooCommerce',
+    value: 2
+  }
+];
+
 function goToPage(url) {
   window.location.href = url;
 }
@@ -65,4 +75,12 @@ function appendNotes(selector) {
 
 function appendTextarea(selector) {
   $(selector).val(text);
+}
+
+function appendProjectTypeOptions(selector) {
+  let optionHtml = '<option value="">-- Select Project Type --</option>';
+  projectTypes.forEach(projectType => {
+    optionHtml += `<option value="${projectType.value}">${projectType.label}</option>`;
+  });
+  $(selector).html(optionHtml);
 }
