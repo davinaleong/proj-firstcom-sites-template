@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirstCom Sites HTML Template</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">FirstCom Solution Sites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex w-100">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <a href="search.html" class="btn btn-outline-primary">Search <i class="fas fa-search fa-fw"></i></a>
+        </form>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Actions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="login.html">
+                  <i class="fas fa-sign-out-alt fa-fw"></i> Logout
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="index.html">
+                  <i class="fas fa-file-alt fa-fw"></i> View Logs
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <aside class="bg-light">
+    <nav class="nav flex-column">
+      <a class="nav-link" href="index.html"><i class="fas fa-file-alt fa-fw"></i> Activity</a>
+      <a class="nav-link" href="projects.html"><i class="fas fa-boxes fa-fw"></i> Projects</a>
+      <a class="nav-link" href="cpanels.html"><i class="fas fa-server fa-fw"></i> CPanels</a>
+      <a class="nav-link" href="settings.html"><i class="fas fa-cogs fa-fw"></i> Settings</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="container-fluid">
+      <h1>
+        View Project
+        <a href="cpanels-edit.html" class="btn btn-outline-primary">Edit <i class="fas fa-pen"></i></a>
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+          Delete <i class="fas fa-trash-alt fa-fw"></i>
+        </button>
+      </h1>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Site Name</li>
+        </ol>
+      </nav>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>ID:</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>Name:</th>
+            <td>Site Name</td>
+          </tr>
+          <tr>
+            <th>Project Executive:</th>
+            <td>John Doe</td>
+          </tr>
+          <tr>
+            <th>Image:</th>
+            <td><img src="images/site.png" alt="Site Name Screenshot" class="img-fluid"></td>
+          </tr>
+          <tr>
+            <th>Notes:</th>
+            <td id="notes"></td>
+          </tr>
+          <tr>
+            <th>Created At:</th>
+            <td>26-09-2021 16:36:00</td>
+          </tr>
+          <tr>
+            <th>Deleted At:</th>
+            <td>26-09-2021 16:36:00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="demo-tab" data-bs-toggle="tab" data-bs-target="#demo" type="button" role="tab" aria-controls="demo" aria-selected="true">Demo</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="live-tab" data-bs-toggle="tab" data-bs-target="#live" type="button" role="tab" aria-controls="live" aria-selected="false">Live</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <!-- Demo Tab -->
+        <div class="tab-pane fade show active" id="demo" role="tabpanel" aria-labelledby="demo-tab">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Design URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg/design <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>Programming Brief:</th>
+                <td><a href="#" target="_blank">www.site.com.sg/programming_brief <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>Site URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg/site <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>Admin URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg/site/admin <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>CPanel URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg:2083 <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>CPanel Username:</th>
+                <td>siteo</td>
+              </tr>
+              <tr>
+                <th>CPanel Password:</th>
+                <td>CtZ[^D.q+6maVyfF</td>
+              </tr>
+              <tr>
+                <th>DB Name:</th>
+                <td>siteo_db</td>
+              </tr>
+              <tr>
+                <th>DB Username:</th>
+                <td>siteo_user</td>
+              </tr>
+              <tr>
+                <th>DB Password:</th>
+                <td>^a=&3Gz^8X+g5xmj</td>
+              </tr>
+              <tr>
+                <th>Backend Username:</th>
+                <td>siteo</td>
+              </tr>
+              <tr>
+                <th>Backend Password:</th>
+                <td>CtZ[^D.q+6maVyfF</td>
+              </tr>
+              <tr>
+                <th>Started At:</th>
+                <td>26-09-2021</td>
+              </tr>
+              <tr>
+                <th>Finished At:</th>
+                <td>26-09-2021</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Demo Tab -->
+        <!-- Live Tab -->
+        <div class="tab-pane fade" id="live" role="tabpanel" aria-labelledby="live-tab">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Site URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg/site <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>Admin URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg/site/admin <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>CPanel URL:</th>
+                <td><a href="#" target="_blank">www.site.com.sg:2083 <i class="fas fa-external-link-alt fa-fw"></i></a></td>
+              </tr>
+              <tr>
+                <th>CPanel Username:</th>
+                <td>siteo</td>
+              </tr>
+              <tr>
+                <th>CPanel Password:</th>
+                <td>CtZ[^D.q+6maVyfF</td>
+              </tr>
+              <tr>
+                <th>DB Name:</th>
+                <td>siteo_db</td>
+              </tr>
+              <tr>
+                <th>DB Username:</th>
+                <td>siteo_user</td>
+              </tr>
+              <tr>
+                <th>DB Password:</th>
+                <td>^a=&3Gz^8X+g5xmj</td>
+              </tr>
+              <tr>
+                <th>Backend Username:</th>
+                <td>siteo</td>
+              </tr>
+              <tr>
+                <th>Backend Password:</th>
+                <td>CtZ[^D.q+6maVyfF</td>
+              </tr>
+              <tr>
+                <th>Lived At:</th>
+                <td>26-09-2021</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Live Tab -->
+      </div>
+
+    </div>
+
+    <a id="btn-top" href="#top" class="btn btn-secondary">Top <i class="fas fa-chevron-up"></i></a>
+  </main>
+
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Source</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This action cannot be undone!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel <i class="fas fa-ban fa-fw"></i></button>
+          <button type="button" class="btn btn-danger">Delete <i class="fas fa-trash-alt fa-fw"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      appendNotes('#notes');
+    });
+  </script>
+</body>
+</html>
