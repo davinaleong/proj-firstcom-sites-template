@@ -1,5 +1,6 @@
 const viewPages = {
-  settings: 'settings-sources-edit.html',
+  settingsSources: 'settings-sources-edit.html',
+  settingsProjectTypes: 'settings-project-types-edit.html',
   cpanels: 'cpanels-view.html',
   projects: 'projects-view.html'
 };
@@ -24,7 +25,11 @@ function goToPage(url) {
 }
 
 function goToEditSourcePage() {
-  goToPage(viewPages.settings);
+  goToPage(viewPages.settingsSources);
+}
+
+function goToEditProjectTypePage() {
+  goToPage(viewPages.settingsProjectTypes);
 }
 
 function goToViewCpanelPage() {
