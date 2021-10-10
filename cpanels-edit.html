@@ -78,6 +78,11 @@
         </div>
 
         <div class="mb-3">
+          <label for="project_type" class="form-label">Project Type*</label>
+          <select name="project_type" id="project_type" class="form-control" required></select>
+        </div>
+
+        <div class="mb-3">
           <label for="site_url" class="form-label">Site URL</label>
           <input type="text" class="form-control" name="site_url" id="site_url" value="www.site.com.sg/site" placeholder="Site URL">
         </div>
@@ -140,6 +145,7 @@
   <script>
     $(document).ready(function() {
       appendTextarea('#notes');
+      appendProjectTypeOptions('#project_type', true);
     });
   </script>
 </body>
