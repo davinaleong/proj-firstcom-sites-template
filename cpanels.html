@@ -66,78 +66,7 @@
         </ol>
       </nav>
 
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Created At</th>
-            <th scope="col">Updated At</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">1</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">2</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">3</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">4</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">5</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">6</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">7</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">8</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">9</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-          <tr class="clickable" onclick="goToViewCpanelPage()">
-            <td scope="row">10</td>
-            <td scope="row">Site Name</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-            <td scope="row">26-09-2021 16:36:00</td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="projects"></div>
 
       <nav aria-label="Page navigation example">
         <ul class="pagination">
@@ -156,6 +85,10 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script>
+    appendProjects(48, 'projects');
+  </script>
 </body>
 </html>

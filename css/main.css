@@ -57,6 +57,13 @@ body>main {
   padding-bottom: 1em;
 }
 
+#projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-gap: 1em;
+}
+
 #btn-top {
   position: fixed;
   bottom: 1em;
