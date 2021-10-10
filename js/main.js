@@ -4,6 +4,11 @@ const viewPages = {
   projects: 'projects-view.html'
 };
 
+const cardTypes = {
+  cpanel: 'cpanel',
+  project: 'project'
+};
+
 function goToPage(url) {
   window.location.href = url;
 }
@@ -20,14 +25,25 @@ function goToViewProjectPage() {
   goToPage(viewPages.projects);
 }
 
-function appendProjects(count, selector, viewPage) {
-  const projectCardHtml = `<div class="card">
+function appendProjects(count, selector, viewPage, cardType = 'cpanel') {
+  let projectCardHtml = `<div class="card">
     <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
     <div class="card-body">
       <h5 class="card-title">Site Name</h5>
-      <a href="${viewPage}" class="btn btn-primary">View Project <i class="fas fa-eye fa-fw"></i></a>
+      <a href="${viewPage}" class="btn btn-primary">View CPanel <i class="fas fa-eye fa-fw"></i></a>
     </div>
   </div>`;
+
+  if (cardType === cardTypes.project) {
+    projectCardHtml = `<div class="card">
+      <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
+      <div class="card-body">
+        <h5 class="card-title">Site Name</h5>
+        <p><span class="badge bg-info">Site is live</span></p>
+        <a href="${viewPage}" class="btn btn-primary">View Project <i class="fas fa-eye fa-fw"></i></a>
+      </div>
+    </div>`;
+  }
 
   for (let i = 0; i < count; i++) {
     $(selector).append(projectCardHtml);
