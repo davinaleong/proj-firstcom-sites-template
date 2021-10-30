@@ -56,23 +56,87 @@
 
   <main>
     <div class="container-fluid">
-      <h1>Settings</h1>
+      <h1>
+        Edit Image
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+          Delete <i class="fas fa-trash-alt fa-fw"></i>
+        </button>
+      </h1>
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">Settings</li>
+          <li class="breadcrumb-item"><a href="settings.html">Settings</a></li>
+          <li class="breadcrumb-item"><a href="settings-images.html">Images</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Edit Image</li>
         </ol>
       </nav>
 
-      <div class="setting-links">
-        <a href="settings-sources.html">Sources</a>
-        <a href="settings-images.html" class="ml-3">Images</a>
-        <a href="settings-project-types.html" class="ml-3">Project Types</a>
-      </div>
+      <form method="post">
+        <div class="mb-3">
+          <label for="id" class="form-label">ID</label>
+          <input type="text" readonly class="form-control-plaintext" id="id" value="1">
+        </div>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name*</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="Image" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="folder" class="form-label">Folder*</label>
+          <select name="folder" class="form-control" id="folder" required>
+            <option value="">-- Folders --</option>
+            <option value="1" selected>Projects</option>
+            <option value="2">CPanels</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">File*</label>
+          <input type="file" class="form-control" name="image" id="image" accept=".jpg,.gif,.png,.jpeg,.bmp" required>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="created_at" class="form-label">Created At</label>
+          <input type="text" readonly class="form-control-plaintext" id="created_at" value="26-09-2021 16:36:00">
+        </div>
+
+        <div class="mb-3">
+          <label for="updated_at" class="form-label">Updated At</label>
+          <input type="text" readonly class="form-control-plaintext" id="updated_at" value="26-09-2021 16:36:00">
+        </div>
+
+        <p>* required fields</p>
+        
+        <div>
+          <a href="settings-images.html" class="btn btn-primary mr-1">Submit <i class="fas fa-check fa-fw"></i></a>
+          <a href="settings-images.html" class="btn btn-outline-secondary mr-1">Cancel <i class="fas fa-ban fa-fw"></i></a>
+        </div>
+      </form>
     </div>
 
     <a id="btn-top" href="#top" class="btn btn-secondary">Top <i class="fas fa-chevron-up"></i></a>
   </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This action cannot be undone!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel <i class="fas fa-ban fa-fw"></i></button>
+          <button type="button" class="btn btn-danger">Delete <i class="fas fa-trash-alt fa-fw"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -56,19 +56,42 @@
 
   <main>
     <div class="container-fluid">
-      <h1>Settings</h1>
+      <h1>Create Image</h1>
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">Settings</li>
+          <li class="breadcrumb-item"><a href="settings.html">Settings</a></li>
+          <li class="breadcrumb-item"><a href="settings-images.html">Images</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Create Image</li>
         </ol>
       </nav>
 
-      <div class="setting-links">
-        <a href="settings-sources.html">Sources</a>
-        <a href="settings-images.html" class="ml-3">Images</a>
-        <a href="settings-project-types.html" class="ml-3">Project Types</a>
-      </div>
+      <form method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name*</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="folder" class="form-label">Folder*</label>
+          <select name="folder" class="form-control" id="folder" required>
+            <option value="" selected>-- Folders --</option>
+            <option value="1">Projects</option>
+            <option value="2">CPanels</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">File*</label>
+          <input type="file" class="form-control" name="image" id="image" accept=".jpg,.gif,.png,.jpeg,.bmp" required>
+        </div>
+
+        <p>* required fields</p>
+        <div>
+          <a href="settings-images.html" class="btn btn-primary">Submit <i class="fas fa-check fa-fw"></i></a>
+          <a href="settings-images.html" class="btn btn-outline-secondary">Cancel <i class="fas fa-ban fa-fw"></i></a>
+        </div>
+      </form>
     </div>
 
     <a id="btn-top" href="#top" class="btn btn-secondary">Top <i class="fas fa-chevron-up"></i></a>

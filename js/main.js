@@ -2,12 +2,14 @@ const viewPages = {
   settingsSources: 'settings-sources-edit.html',
   settingsProjectTypes: 'settings-project-types-edit.html',
   cpanels: 'cpanels-view.html',
-  projects: 'projects-view.html'
+  projects: 'projects-view.html',
+  images: 'settings-images-edit.html'
 };
 
 const cardTypes = {
   cpanel: 'cpanel',
-  project: 'project'
+  project: 'project',
+  image: 'image'
 };
 
 const projectTypes = [
@@ -40,8 +42,12 @@ function goToViewProjectPage() {
   goToPage(viewPages.projects);
 }
 
+function goToViewImagePage() {
+  goToPage(viewPages.images);
+}
+
 function appendProjects(count, selector, viewPage, cardType = 'cpanel') {
-  let projectCardHtml = `<div class="card">
+  let cardHtml = `<div class="card">
     <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
     <div class="card-body">
       <h5 class="card-title">Site Name</h5>
@@ -51,7 +57,7 @@ function appendProjects(count, selector, viewPage, cardType = 'cpanel') {
   </div>`;
 
   if (cardType === cardTypes.project) {
-    projectCardHtml = `<div class="card">
+    cardHtml = `<div class="card">
       <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
       <div class="card-body">
         <h5 class="card-title">Site Name</h5>
@@ -61,8 +67,54 @@ function appendProjects(count, selector, viewPage, cardType = 'cpanel') {
     </div>`;
   }
 
+  switch(cardType) {
+    case cardTypes.project:
+      cardHtml = `<div class="card">
+        <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
+        <div class="card-body">
+          <h5 class="card-title">Site Name</h5>
+          <p><span class="badge bg-info">Open Cart</span> <span class="badge bg-primary">Live</span></p>
+          <a href="${viewPage}" class="btn btn-primary">View Project <i class="fas fa-eye fa-fw"></i></a>
+        </div>
+      </div>`;
+      break;
+
+    case cardTypes.cpanel:
+      cardHtml = `<div class="card">
+        <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
+        <div class="card-body">
+          <h5 class="card-title">Site Name</h5>
+          <p><span class="badge bg-info">Open Cart</span></p>
+          <a href="${viewPage}" class="btn btn-primary">View CPanel <i class="fas fa-eye fa-fw"></i></a>
+        </div>
+      </div>`;
+      break;
+
+    case cardTypes.image:
+      cardHtml = `<div class="card">
+        <img src="images/site.png" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">Image</h5>
+          <p><span class="badge bg-secondary">/cpanels</span></p>
+          <a href="${viewPage}" class="btn btn-primary">View Image <i class="fas fa-eye fa-fw"></i></a>
+        </div>
+      </div>`;
+      break;
+
+    default:
+      cardHtml = `<div class="card">
+        <img src="images/site.png" class="card-img-top" alt="Site Name Screenshot">
+        <div class="card-body">
+          <h5 class="card-title">Site Name</h5>
+          <p><span class="badge bg-info">Open Cart</span></p>
+          <a href="${viewPage}" class="btn btn-primary">View CPanel <i class="fas fa-eye fa-fw"></i></a>
+        </div>
+      </div>`;
+      break;
+  }
+
   for (let i = 0; i < count; i++) {
-    $(selector).append(projectCardHtml);
+    $(selector).append(cardHtml);
   }
 }
 
